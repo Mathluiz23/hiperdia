@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                     // Target moderno
+    "module": "commonjs",                 // Usando o sistema de módulos do Node.js
+    "outDir": "./dist",                   // A saída compilada
+    "rootDir": "./src",                   // A entrada do TypeScript
+    "strict": true,                       // Estrita verificação de tipos
+    "esModuleInterop": true               // Permitir interoperabilidade entre módulos ES e CommonJS
+  },
+  "include": ["src/**/*.ts"],             // Incluir todos os arquivos TS
+  "exclude": ["node_modules"]             // Excluir node_modules
+}
