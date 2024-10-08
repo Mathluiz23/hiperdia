@@ -83,15 +83,6 @@ const App: React.FC = () => {
     localStorage.removeItem('medicoes');
   };
 
-  const salvarNoBanco = async () => {
-    try {
-      await salvarMedicoes({ usuario, medicoes });
-      alert('Dados salvos no banco de dados com sucesso!');
-    } catch (error) {
-      alert('Erro ao salvar dados.');
-    }
-  };
-
   const handleExportarPDF = async () => {
     try {
       if (!headerRef.current || !tabelaRef.current || !graficoRef.current) {
@@ -104,10 +95,48 @@ const App: React.FC = () => {
     }
   };
 
-
   const handleUsuarioChange = (dados: { nome: string; idade: string; medicamentos: string }) => {
     setUsuario(dados);
   };
+
+  const salvarNoBanco = async () => {
+    try {
+      const dados = {
+        usuario: {
+          nome: usuario.nome,
+          idade: usuario.idade,
+          medicamentos: usuario.medicamentos,
+        },
+        medicoes: medicoes.map(medicao => {
+          const [pressaoSistolica, pressaoDiastolica] = medicao.resultado.split('x').map(Number);  // Separar a pressão sistólica e diastólica
+          
+          return {
+            data: medicao.data,
+            horario: medicao.horario,
+            pressaoSistolica,
+            pressaoDiastolica,
+            periodo: medicao.periodo,
+          };
+        }),
+      };
+  
+      await salvarMedicoes(dados);  // Chama o serviço que faz a requisição para o backend
+      alert('Dados salvos no banco de dados com sucesso!');
+    } catch (error: any) {  // Certifique-se de que o error está tipado como 'any' aqui para poder acessar suas propriedades
+      if (error.response?.status === 409) {
+        alert('Essa medição já foi registrada anteriormente.');
+      } else if (error.response) {
+        alert(`Erro ao salvar dados: ${error.response.data.message}`);
+      } else {
+        alert('Erro desconhecido ao salvar dados.');
+      }
+    }
+  };
+  
+  
+  
+  
+  
 
   return (
     <div className="container mx-auto p-4">
