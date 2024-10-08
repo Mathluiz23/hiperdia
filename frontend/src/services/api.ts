@@ -83,13 +83,12 @@ export const exportarRelatorio = async (
   }
 };
 
-export const salvarMedicoes = async (dados: { usuario: any; medicoes: Medicao[] }) => {
+export const salvarMedicoes = async (dados: { usuario: any; medicoes: any[] }) => {
   try {
-    const response = await axios.post('https://sua-api.com/medicoes', dados);
-    console.log('Dados salvos com sucesso:', response.data);
+    const response = await axios.post('http://localhost:3000/api/medicoes', dados);
     return response.data;
   } catch (error) {
-    console.error('Erro ao salvar as medições:', error);
+    console.error('Erro ao salvar dados na API:', error);
     throw error;
   }
 };
