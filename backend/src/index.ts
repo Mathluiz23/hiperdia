@@ -1,20 +1,28 @@
 import express from 'express';
-import dotenv from 'dotenv';
-import userRoutes from './routes/userRoutes';
-
-// Carregar variáveis de ambiente
-dotenv.config();
+import bodyParser from 'body-parser';
+import cors from 'cors';  // Importando o cors
+import medicaoRoutes from './routes/medicaoRoutes';
+import sequelize from './config/database';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-// Middleware para interpretar JSON
-app.use(express.json());
+// Habilitando o CORS para todas as rotas
+app.use(cors());
 
-// Definir rotas
-app.use('/api', userRoutes);
+// Parsing do JSON nas requisições
+app.use(bodyParser.json());
 
-// Iniciar o servidor
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+// Definindo as rotas da API
+app.use('/api', medicaoRoutes);
+
+// Sincronizar o banco de dados
+sequelize.sync().then(() => {
+  console.log('Banco de dados sincronizado');
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
+}).catch((error) => {
+  console.error('Erro ao sincronizar o banco de dados:', error);
 });
+
