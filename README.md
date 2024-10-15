@@ -31,9 +31,9 @@
   - `axios` para requisições HTTP à API.
 
 
-## Demonstração:
+# Demonstração ⏯️
 
-# Tabela e cadastro de medições
+Tabela e cadastro de medições
 
 <div align="center">
     <img alt="gif de apresentação" src="/assets/tabela.png"/>
@@ -41,7 +41,7 @@
 
 <br>
 
-# Gráfico
+Gráfico
 
 <div align="center">
     <img alt="gif de apresentação" src="/assets/grafico.png"/>
