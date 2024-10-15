@@ -30,6 +30,25 @@
   - `html2canvas` e `jspdf` para geração de PDFs.
   - `axios` para requisições HTTP à API.
 
+
+## Demonstração:
+
+# Tabela e cadastro de medições
+
+<div align="center">
+    <img alt="gif de apresentação" src="/assets/tabela.png"/>
+</div>
+
+<br>
+
+# Gráfico
+
+<div align="center">
+    <img alt="gif de apresentação" src="/assets/grafico.png"/>
+</div>
+
+<br>
+
 ## Instalação
 
 ### Pré-requisitos
@@ -88,5 +107,5 @@ Sinta-se à vontade para abrir issues e enviar pull requests. Seguindo as boas p
 
 ---
 
-Made with ❤️ by [Seu Nome](https://github.com/Mathluiz23)
+Made with ❤️ by [Matheus](https://github.com/Mathluiz23)
 
