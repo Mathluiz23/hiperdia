@@ -1,6 +1,9 @@
 {
-  "builds": [{ "src": "frontend/package.json", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "frontend/$1" }]
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "frontend/build" }
+    }
+  ]
 }
-
-  
