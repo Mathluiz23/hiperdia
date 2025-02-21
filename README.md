@@ -1,6 +1,9 @@
 # Hiperdia - Monitoramento de Pressão Arterial e Saúde 👨‍⚕️
 
+
 * Projeto ainda em desenvolvimento :construction:
+
+* deploy: https://hiperdia.vercel.app/ 📈
 
 **Hiperdia** é uma aplicação web que permite monitorar medições de pressão arterial de forma organizada e visual, gerando relatórios em PDF, armazenando as medições no banco de dados e exibindo gráficos de evolução das medições.
 
