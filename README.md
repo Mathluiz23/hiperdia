@@ -1,4 +1,4 @@
-# Hiperdia - Monitoramento de Pressão Arterial e Saúde 👨‍⚕️
+# Hiperdia - Monitoramento de Pressão Arterial e Saúde 👨‍⚕️ 🩺
 
 
 * Projeto ainda em desenvolvimento :construction:
