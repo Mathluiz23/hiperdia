@@ -1,114 +1,111 @@
-# Hiperdia - Monitoramento de Pressão Arterial e Saúde 👨‍⚕️ 🩺
+# Hiperdia – Blood Pressure and Health Monitoring 👨‍⚕️ 🩺
 
+* Project still in development :construction:
 
-* Projeto ainda em desenvolvimento :construction:
+* Deploy: https://hiperdia.vercel.app/ 📈
 
-* deploy: https://hiperdia.vercel.app/ 📈
+**Hiperdia** is a web application that allows you to monitor blood pressure readings in an organized and visual way, generating PDF reports, storing readings in a database, and displaying measurement progress charts.
 
-**Hiperdia** é uma aplicação web que permite monitorar medições de pressão arterial de forma organizada e visual, gerando relatórios em PDF, armazenando as medições no banco de dados e exibindo gráficos de evolução das medições.
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [How to Use](#how-to-use)
+- [PDF Export](#pdf-export)
+- [Save Measurements](#save-measurements)
+- [Contributing](#contributing)
 
-## Índice
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
-- [Exportação de PDF](#exportação-de-pdf)
-- [Salvar Medições](#salvar-medições)
-- [Contribuição](#contribuição)
+## Features
+- Add blood pressure readings.
+- Edit and delete existing readings.
+- Display readings in an organized table.
+- Generate an interactive chart to visualize progress.
+- Export readings and chart as a PDF report.
+- Save readings to a database via an API.
 
-## Funcionalidades
-- Adicionar medições de pressão arterial.
-- Editar e deletar medições já registradas.
-- Exibir as medições em uma tabela organizada.
-- Gerar um gráfico interativo da evolução das medições.
-- Exportar relatórios de medições e gráficos em formato PDF.
-- Salvar medições em um banco de dados via API.
+## Technologies Used
+- **Frontend**: React.js, Tailwind CSS  
+- **Backend**: Node.js, Express.js, Sequelize, MySQL  
+- **Libraries**:
+  - `react-icons` for icons.
+  - `chart.js` and `react-chartjs-2` for interactive charts.
+  - `html2canvas` and `jspdf` for PDF generation.
+  - `axios` for API HTTP requests.
 
-## Tecnologias Utilizadas
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Node.js, Express.js, Sequelize, MySQL
-- **Bibliotecas**:
-  - `react-icons` para ícones.
-  - `chart.js` e `react-chartjs-2` para gráficos interativos.
-  - `html2canvas` e `jspdf` para geração de PDFs.
-  - `axios` para requisições HTTP à API.
+# Demo ⏯️
 
-
-# Demonstração ⏯️
-
-Tabela e cadastro de medições
+Table and Measurement Form
 
 <div align="center">
-    <img alt="gif de apresentação" src="/assets/tabela.png"/>
+    <img alt="presentation gif" src="/assets/tabela.png"/>
 </div>
 
 <br>
 
-Gráfico
+Chart
 
 <div align="center">
-    <img alt="gif de apresentação" src="/assets/grafico.png"/>
+    <img alt="presentation gif" src="/assets/grafico.png"/>
 </div>
 
 <br>
 
-## Instalação
+## Installation
 
-### Pré-requisitos
-- Node.js (versão 16 ou superior)
-- MySQL para o banco de dados
+### Prerequisites
+- Node.js (version 16 or higher)
+- MySQL for the database
 - Git
 
-### Passos para instalação
-1. Clone o repositório:
+### Installation Steps
+1. Clone the repository:
     ```bash
     git clone https://github.com/seu-usuario/hiperdia.git
     ```
 
-2. Acesse o diretório do projeto:
+2. Navigate to the project directory:
     ```bash
     cd hiperdia
     ```
 
-3. Instale as dependências:
+3. Install dependencies:
     ```bash
     npm install
     ```
 
-4. Configure as variáveis de ambiente:
-    - Crie um arquivo `.env` na raiz do projeto e adicione as variáveis para conexão com o banco de dados e a API.
+4. Set up environment variables:
+    - Create a `.env` file in the root directory and add the variables for database and API connection.
 
-5. Inicie o servidor de desenvolvimento:
+5. Start the development server:
     ```bash
     npm run dev
     ```
 
-## Como Usar
+## How to Use
 
-1. Acesse a aplicação no seu navegador.
-2. Adicione os dados do usuário no formulário de **Dados do Usuário**.
-3. Insira as medições de pressão arterial no formulário de **Medições**.
-4. Visualize os dados na tabela e o gráfico gerado automaticamente.
-5. As medições são salvas automaticamente no local storage e podem ser exportadas ou enviadas para o banco de dados.
+1. Open the app in your browser.
+2. Fill in the user details form in the **User Data** section.
+3. Add blood pressure readings in the **Measurements** section.
+4. View the data in the table and the automatically generated chart.
+5. Measurements are saved locally in the browser (local storage) and can be exported or sent to the database.
 
-## Exportação de PDF
+## PDF Export
 
-- A funcionalidade de exportação de PDF captura o cabeçalho, a tabela de medições e o gráfico, gerando um arquivo PDF que pode ser baixado pelo usuário.
-- Para exportar o PDF, basta clicar no botão **Exportar PDF** após adicionar medições.
+- The PDF export feature captures the header, measurements table, and chart to generate a downloadable PDF file.
+- To export the PDF, click the **Export PDF** button after adding readings.
 
-## Salvar Medições
+## Save Measurements
 
-- O botão **Salvar Dados** envia as medições e informações do usuário para o banco de dados através de uma API configurada no backend.
-- Certifique-se de que a API está rodando corretamente para salvar os dados.
+- The **Save Data** button sends the user and reading data to the backend API, storing it in the database.
+- Make sure the API is running properly before saving data.
 
-## Contribuição
-Sinta-se à vontade para abrir issues e enviar pull requests. Seguindo as boas práticas de commits semânticos e mantendo a padronização de código.
+## Contributing
+Feel free to open issues and submit pull requests. Please follow semantic commit best practices and keep the code style consistent.
 
-### Regras para Commit
-- Use mensagens de commit semânticas (ex.: `feat:`, `fix:`, `chore:`, etc.).
-- Mantenha commits explicativos e informativos.
+### Commit Rules
+- Use semantic commit messages (e.g., `feat:`, `fix:`, `chore:`).
+- Keep commits clear and descriptive.
 
 ---
 
 Made with ❤️ by [Matheus](https://github.com/Mathluiz23)
-
